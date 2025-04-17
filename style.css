@@ -1,0 +1,38 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+  height: calc(100% - 2em);
+  padding: 1em;
+}
+
+header {
+  background-color: yellow;
+  grid-area: header;
+}
+
+#text {
+  background-color: limegreen;
+  /*height: 500px;*/
+  grid-area: main;
+}
+
+#sidebar {
+  background-color: hotpink;
+  grid-area: sidebar;
+}
+
+footer {
+  background-color: cyan;
+  grid-area: footer;
+}
